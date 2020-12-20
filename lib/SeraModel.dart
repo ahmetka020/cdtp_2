@@ -1,18 +1,16 @@
 class SeraModel{
   int _seraId;
-  int _temperature;
-
+  var _temperature;
+  String result;
 
 
   int get temperature => _temperature;
 
   set temperature(int value) {
-    if(value >= 0 && value <= 255)
-      _temperature = value;
-    else if (value < 0)
-      _temperature = 0;
-    else
-      _temperature = 255;
+    if(value == null){
+      return;
+    }
+    _temperature = value;
   }
 
   int get seraId => _seraId;
